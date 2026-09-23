@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/*
+ * ArtSphere Design System — Stage 1
+ * ----------------------------------
+ * Single source of truth for colors, type, radii, shadows and motion.
+ * Built on Tailwind CSS v4 `@theme` tokens so every later stage (shop,
+ * profiles, checkout, admin) inherits the same visual language.
+ */
+
+@theme {
+  /* Typography */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Ink — warm near-black neutrals */
+  --color-ink-50: #faf9f7;
+  --color-ink-100: #f2f0ec;
+  --color-ink-200: #e5e1da;
+  --color-ink-300: #cfc8bd;
+  --color-ink-400: #a89e8f;
+  --color-ink-500: #83786a;
+  --color-ink-600: #665c50;
+  --color-ink-700: #50483f;
+  --color-ink-800: #38322c;
+  --color-ink-900: #211d19;
+  --color-ink-950: #0d0c0b;
+
+  /* Canvas — gallery whites */
+  --color-canvas: #faf9f7;
+  --color-canvas-raised: #ffffff;
+
+  /* Accent — brass / ochre, used sparingly */
+  --color-brass-50: #fdf8ef;
+  --color-brass-100: #f9ecd3;
+  --color-brass-200: #f2d6a5;
+  --color-brass-300: #eaba70;
+  --color-brass-400: #e09c42;
+  --color-brass-500: #d3811f;
+  --color-brass-600: #b76617;
+  --color-brass-700: #944d18;
+  --color-brass-800: #783e1a;
+  --color-brass-900: #633418;
+
+  /* Radii */
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.625rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.125rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  /* Shadows — soft, gallery-like */
+  --shadow-card: 0 1px 2px rgb(13 12 11 / 0.04), 0 8px 24px -12px rgb(13 12 11 / 0.12);
+  --shadow-card-hover: 0 2px 4px rgb(13 12 11 / 0.05), 0 20px 44px -16px rgb(13 12 11 / 0.22);
+  --shadow-modal: 0 24px 80px -16px rgb(13 12 11 / 0.35);
+
+  /* Motion */
+  --ease-gallery: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-fade-up: fade-up 0.7s var(--ease-gallery) both;
+  --animate-fade-in: fade-in 0.5s var(--ease-gallery) both;
+  --animate-scale-in: scale-in 0.25s var(--ease-gallery) both;
+  --animate-float: float 9s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-ink-800 antialiased;
+  }
+
+  ::selection {
+    @apply bg-brass-200 text-ink-950;
+  }
+
+  /* Elegant focus states across the whole design system */
+  :focus-visible {
+    outline: 2px solid var(--color-brass-500);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Section eyebrow label, e.g. "FEATURED WORKS" */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-ink-400;
+  }
+
+  .display-title {
+    font-family: var(--font-display);
+    @apply font-medium leading-[1.05] tracking-tight text-ink-950;
+    font-variation-settings: "SOFT" 60;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

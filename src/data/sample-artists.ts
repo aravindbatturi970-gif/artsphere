@@ -1,0 +1,128 @@
+import type { Artist } from "@/types";
+
+/**
+ * Mock artists. `bio`/`practice` feed the profile page; artworkCount is
+ * derived at render time elsewhere, kept here for future API parity.
+ */
+export const SAMPLE_ARTISTS: Artist[] = [
+  {
+    id: "amara-okafor",
+    name: "Amara Okafor",
+    tagline: "Large-scale oil paintings of light, land and memory.",
+    location: "Lagos, Nigeria",
+    artworkCount: 24,
+    gradient: "linear-gradient(135deg, #f2d6a5 0%, #d3811f 100%)",
+    initials: "AO",
+    accent: "bg-brass-200",
+    bio: "Amara Okafor paints the way light settles on a place after everyone has gone home. Working at large scale in oil and charcoal, she builds surfaces slowly — layering, sanding back, and layering again — until the canvas holds both the landscape and the weather around it.",
+    practice:
+      "Studio practice: oils and charcoal on linen, worked in series. Each body of work begins with a season of field drawing.",
+    followers: 2840,
+    joined: 2023,
+  },
+  {
+    id: "mei-tanaka",
+    name: "Mei Tanaka",
+    tagline: "Quiet ink washes exploring negative space.",
+    location: "Kyoto, Japan",
+    artworkCount: 41,
+    gradient: "linear-gradient(135deg, #faf9f7 0%, #a89e8f 100%)",
+    initials: "MT",
+    accent: "bg-ink-200",
+    bio: "Trained in traditional ink wash, Mei Tanaka works at the edge of what a single brushstroke can carry. Her washes leave generous silence on the paper — what is not painted matters as much as what is.",
+    practice:
+      "Studio practice: sumi ink and mineral pigments on washi, mounted by hand in the traditional manner.",
+    followers: 4120,
+    joined: 2022,
+  },
+  {
+    id: "dev-anand",
+    name: "Dev Anand",
+    tagline: "Generative systems translated into pigment.",
+    location: "Bengaluru, India",
+    artworkCount: 17,
+    gradient: "linear-gradient(135deg, #4c3a78 0%, #1f1d2b 100%)",
+    initials: "DA",
+    accent: "bg-[#4c3a78]/20",
+    bio: "Dev Anand writes algorithms that behave like weather systems, then prints the results as archival pigment prints. Each edition is unique — the system never runs the same way twice.",
+    practice:
+      "Studio practice: custom generative software, output as unique archival pigment prints on cotton rag.",
+    followers: 5390,
+    joined: 2024,
+  },
+  {
+    id: "hana-yoshida",
+    name: "Hana Yoshida",
+    tagline: "Bronze and steel forms shaped by the sea.",
+    location: "Osaka, Japan",
+    artworkCount: 12,
+    gradient: "linear-gradient(135deg, #b76617 0%, #633418 100%)",
+    initials: "HY",
+    accent: "bg-brass-700/20",
+    bio: "Hana Yoshida casts bronze and carves stone into forms that feel pulled from a shoreline — worn, patient, heavy with salt. Her work sits equally at home in a collector's court and a public square.",
+    practice:
+      "Studio practice: lost-wax bronze casting and direct stone carving, finished by hand.",
+    followers: 1980,
+    joined: 2023,
+  },
+  {
+    id: "sofia-marchetti",
+    name: "Sofia Marchetti",
+    tagline: "Pastel and oil studies of gathered light.",
+    location: "Bologna, Italy",
+    artworkCount: 29,
+    gradient: "linear-gradient(135deg, #f9ecd3 0%, #e09c42 100%)",
+    initials: "SM",
+    accent: "bg-brass-300/30",
+    bio: "Sofia Marchetti studies how objects hold the day's light — brass, linen, fruit, shadow. Her still lifes are painted in long sittings with the same window, the same hour, the same quiet.",
+    practice:
+      "Studio practice: oil on board and pastel on paper, painted from direct observation only.",
+    followers: 2210,
+    joined: 2023,
+  },
+  {
+    id: "elif-demir",
+    name: "Elif Demir",
+    tagline: "Slow photography of open places.",
+    location: "Istanbul, Türkiye",
+    artworkCount: 33,
+    gradient: "linear-gradient(135deg, #fdf8ef 0%, #b76617 100%)",
+    initials: "ED",
+    accent: "bg-brass-200",
+    bio: "Elif Demir photographs places at the hour when nothing happens. Salt flats, harbours, empty roads — her prints hold the stillness of standing there, signed in editions of twelve.",
+    practice:
+      "Studio practice: large-format film, hand-printed silver gelatin and archival pigment editions.",
+    followers: 3560,
+    joined: 2022,
+  },
+  {
+    id: "nora-vex",
+    name: "Nora Vex",
+    tagline: "Drawn maps of imagined terrain.",
+    location: "Lisbon, Portugal",
+    artworkCount: 21,
+    gradient: "linear-gradient(135deg, #f2f0ec 0%, #50483f 100%)",
+    initials: "NV",
+    accent: "bg-ink-300/30",
+    bio: "Nora Vex draws cartographies of places that don't exist — coastlines, ridgelines, trade routes of invented countries. Graphite first, then gouache, then the small details that make a map a lie you believe.",
+    practice:
+      "Studio practice: graphite and gouache on paper, mixed media on canvas for large works.",
+    followers: 1740,
+    joined: 2024,
+  },
+  {
+    id: "jonas-lindqvist",
+    name: "Jonas Lindqvist",
+    tagline: "Northern harbours in acrylic and ink.",
+    location: "Gothenburg, Sweden",
+    artworkCount: 27,
+    gradient: "linear-gradient(135deg, #e5e1da 0%, #38322c 100%)",
+    initials: "JL",
+    accent: "bg-ink-200",
+    bio: "Jonas Lindqvist paints the working waterfronts of Scandinavia — cranes, hulls, grey water, the last light on a quay. His prints bring the harbour's quiet into small rooms.",
+    practice:
+      "Studio practice: acrylic on panel, giclée editions printed and inspected in his own studio.",
+    followers: 1490,
+    joined: 2023,
+  },
+];
